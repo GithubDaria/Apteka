@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3495F16B-1341-474E-A8E9-C146D4716531}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Apteka</RootNamespace>
+    <AssemblyName>Apteka</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Docking">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Docking.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Navigator">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Navigator.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Ribbon">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Ribbon.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Workspace">
+      <HintPath>..\..\..\..\Downloads\Krypton-master\Krypton-master\Bin\ComponentFactory.Krypton.Workspace.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\CheckBoxListItem.cs" />
+    <Compile Include="Classes\ComboItem.cs" />
+    <Compile Include="Classes\DataLoader.cs" />
+    <Compile Include="Classes\DataPrinter.cs" />
+    <Compile Include="Forms\AddingProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingProductForm.Designer.cs">
+      <DependentUpon>AddingProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateReceipts.Designer.cs">
+      <DependentUpon>CreateReceipts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\LoadMoreButtonControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\LoadMoreButtonControl.Designer.cs">
+      <DependentUpon>LoadMoreButtonControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Object Classe\Manufacturer.cs" />
+    <Compile Include="Classes\Object Classe\PrescriptionType.cs" />
+    <Compile Include="Forms\Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product.Designer.cs">
+      <DependentUpon>Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Object Classe\Products.cs" />
+    <Compile Include="User Control\Not found.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Not found.Designer.cs">
+      <DependentUpon>Not found.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\ProductsLayoutInList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\ProductsLayoutInList.Designer.cs">
+      <DependentUpon>ProductsLayoutInList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\Object Classe\Receipt.cs" />
+    <Compile Include="Classes\Object Classe\ReceiptsDetail.cs" />
+    <Compile Include="Forms\Receits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Receits.Designer.cs">
+      <DependentUpon>Receits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Object Classe\Seller.cs" />
+    <Compile Include="Forms\SellersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SellersForm.Designer.cs">
+      <DependentUpon>SellersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Object Classe\TypeOfMedication.cs" />
+    <Compile Include="User Control\RecieptsLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\RecieptsLabel.Designer.cs">
+      <DependentUpon>RecieptsLabel.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\AddingProductForm.resx">
+      <DependentUpon>AddingProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CreateReceipts.resx">
+      <DependentUpon>CreateReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\LoadMoreButtonControl.resx">
+      <DependentUpon>LoadMoreButtonControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product.resx">
+      <DependentUpon>Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Not found.resx">
+      <DependentUpon>Not found.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\ProductsLayoutInList.resx">
+      <DependentUpon>ProductsLayoutInList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\Receits.resx">
+      <DependentUpon>Receits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SellersForm.resx">
+      <DependentUpon>SellersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\RecieptsLabel.resx">
+      <DependentUpon>RecieptsLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
