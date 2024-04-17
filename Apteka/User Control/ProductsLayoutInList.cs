@@ -19,9 +19,10 @@ namespace Apteka
         public event EventHandler<ProductEventArgs> DecrementCountClicked;
 
         private int Count = 0;
-        public ProductsLayoutInList()
+        public ProductsLayoutInList(Image image)
         {
             InitializeComponent();
+            ProductPictureBox.Image = image;
         }
         private void ProductDataHolder_Click(object sender, EventArgs e)
         {

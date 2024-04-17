@@ -35,6 +35,7 @@ namespace Apteka
             // LoadMoreClicked
             // 
             this.LoadMoreClicked.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.LoadMoreClicked.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LoadMoreClicked.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoadMoreClicked.Location = new System.Drawing.Point(0, 0);
             this.LoadMoreClicked.Margin = new System.Windows.Forms.Padding(0);
@@ -50,7 +51,6 @@ namespace Apteka
             this.LoadMoreClicked.StateCommon.Content.ShortText.Font = new System.Drawing.Font("Verdana", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadMoreClicked.TabIndex = 2;
             this.LoadMoreClicked.Values.Text = "Завантажити ще";
-            //this.LoadMoreClicked.Click += new System.EventHandler(this.LoadMoreClicked_Click);
             // 
             // LoadMoreButtonControl
             // 

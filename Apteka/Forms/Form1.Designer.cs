@@ -129,6 +129,7 @@ namespace Apteka
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 12);
@@ -141,6 +142,7 @@ namespace Apteka
             // AddProductPage
             // 
             this.AddProductPage.AutoSize = true;
+            this.AddProductPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddProductPage.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddProductPage.ForeColor = System.Drawing.Color.White;
             this.AddProductPage.Location = new System.Drawing.Point(210, 12);
@@ -154,6 +156,7 @@ namespace Apteka
             // SellersPage
             // 
             this.SellersPage.AutoSize = true;
+            this.SellersPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SellersPage.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SellersPage.ForeColor = System.Drawing.Color.White;
             this.SellersPage.Location = new System.Drawing.Point(413, 12);
@@ -167,6 +170,7 @@ namespace Apteka
             // RecieptsPageButton
             // 
             this.RecieptsPageButton.AutoSize = true;
+            this.RecieptsPageButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RecieptsPageButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecieptsPageButton.ForeColor = System.Drawing.Color.White;
             this.RecieptsPageButton.Location = new System.Drawing.Point(594, 12);
@@ -180,6 +184,7 @@ namespace Apteka
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1281, 12);
@@ -291,6 +296,7 @@ namespace Apteka
             this.kryptonGroup6.Panel.Controls.Add(this.label17);
             this.kryptonGroup6.Panel.Controls.Add(this.label15);
             this.kryptonGroup6.Panel.Controls.Add(this.pictureBox1);
+            this.kryptonGroup6.Panel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kryptonGroup6.Size = new System.Drawing.Size(270, 330);
             this.kryptonGroup6.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
             | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Left) 
@@ -326,6 +332,7 @@ namespace Apteka
             // 
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(80)))));
+            this.label17.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label17.Font = new System.Drawing.Font("Verdana", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(75, 280);
@@ -367,6 +374,7 @@ namespace Apteka
             // kryptonButton1
             // 
             this.kryptonButton1.ButtonStyle = ComponentFactory.Krypton.Toolkit.ButtonStyle.NavigatorMini;
+            this.kryptonButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.kryptonButton1.Location = new System.Drawing.Point(45, 11);
             this.kryptonButton1.Margin = new System.Windows.Forms.Padding(0);
             this.kryptonButton1.Name = "kryptonButton1";
@@ -504,10 +512,11 @@ namespace Apteka
             // 
             this.MinPriceTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.MinPriceTextBox.Location = new System.Drawing.Point(27, 62);
-            this.MinPriceTextBox.MaximumSize = new System.Drawing.Size(200, 26);
+            this.MinPriceTextBox.MaximumSize = new System.Drawing.Size(86, 26);
             this.MinPriceTextBox.MaxLength = 5;
+            this.MinPriceTextBox.MinimumSize = new System.Drawing.Size(86, 26);
             this.MinPriceTextBox.Name = "MinPriceTextBox";
-            this.MinPriceTextBox.Size = new System.Drawing.Size(94, 26);
+            this.MinPriceTextBox.Size = new System.Drawing.Size(86, 26);
             this.MinPriceTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
             this.MinPriceTextBox.StateCommon.Border.Color1 = System.Drawing.Color.Gray;
             this.MinPriceTextBox.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -526,8 +535,9 @@ namespace Apteka
             // 
             this.MaxPriceTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.MaxPriceTextBox.Location = new System.Drawing.Point(119, 62);
-            this.MaxPriceTextBox.MaximumSize = new System.Drawing.Size(200, 26);
+            this.MaxPriceTextBox.MaximumSize = new System.Drawing.Size(96, 26);
             this.MaxPriceTextBox.MaxLength = 5;
+            this.MaxPriceTextBox.MinimumSize = new System.Drawing.Size(96, 26);
             this.MaxPriceTextBox.Name = "MaxPriceTextBox";
             this.MaxPriceTextBox.Size = new System.Drawing.Size(96, 26);
             this.MaxPriceTextBox.StateCommon.Back.Color1 = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(249)))), ((int)(((byte)(249)))));
@@ -706,7 +716,7 @@ namespace Apteka
             this.Palette = this.kryptonPalette1;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Обліку медикаментів аптеки";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.TopBar.ResumeLayout(false);
             this.TopBar.PerformLayout();

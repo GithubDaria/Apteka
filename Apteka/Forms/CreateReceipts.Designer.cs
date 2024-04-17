@@ -39,10 +39,10 @@ namespace Apteka
             this.flowLayoutPanenl = new System.Windows.Forms.FlowLayoutPanel();
             this.ConfirmButton = new System.Windows.Forms.Label();
             this.kryptonGroup2 = new ComponentFactory.Krypton.Toolkit.KryptonGroup();
+            this.FullPriceLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SellerCodeTextBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.SellerLabel = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.FullPriceLabel = new System.Windows.Forms.Label();
             this.TopBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReceiptsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReceiptsList.Panel)).BeginInit();
@@ -71,6 +71,7 @@ namespace Apteka
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(62, 12);
@@ -84,6 +85,7 @@ namespace Apteka
             // AddProductPage
             // 
             this.AddProductPage.AutoSize = true;
+            this.AddProductPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddProductPage.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddProductPage.ForeColor = System.Drawing.Color.White;
             this.AddProductPage.Location = new System.Drawing.Point(210, 12);
@@ -97,6 +99,7 @@ namespace Apteka
             // SellersPage
             // 
             this.SellersPage.AutoSize = true;
+            this.SellersPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SellersPage.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SellersPage.ForeColor = System.Drawing.Color.White;
             this.SellersPage.Location = new System.Drawing.Point(413, 12);
@@ -110,6 +113,7 @@ namespace Apteka
             // RecieptsPageButton
             // 
             this.RecieptsPageButton.AutoSize = true;
+            this.RecieptsPageButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RecieptsPageButton.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RecieptsPageButton.ForeColor = System.Drawing.Color.White;
             this.RecieptsPageButton.Location = new System.Drawing.Point(594, 12);
@@ -123,6 +127,7 @@ namespace Apteka
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(1281, 12);
@@ -160,6 +165,7 @@ namespace Apteka
             // 
             this.ConfirmButton.AutoSize = true;
             this.ConfirmButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(80)))));
+            this.ConfirmButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ConfirmButton.Font = new System.Drawing.Font("Verdana", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ConfirmButton.ForeColor = System.Drawing.Color.White;
             this.ConfirmButton.Location = new System.Drawing.Point(757, 38);
@@ -189,6 +195,28 @@ namespace Apteka
             this.kryptonGroup2.StateCommon.Border.Rounding = 10;
             this.kryptonGroup2.TabIndex = 5;
             // 
+            // FullPriceLabel
+            // 
+            this.FullPriceLabel.AutoSize = true;
+            this.FullPriceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.FullPriceLabel.Font = new System.Drawing.Font("Verdana", 30F);
+            this.FullPriceLabel.Location = new System.Drawing.Point(404, 38);
+            this.FullPriceLabel.Name = "FullPriceLabel";
+            this.FullPriceLabel.Size = new System.Drawing.Size(142, 48);
+            this.FullPriceLabel.TabIndex = 17;
+            this.FullPriceLabel.Text = "Сума:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 30F);
+            this.label2.Location = new System.Drawing.Point(68, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(142, 48);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "Сума:";
+            // 
             // SellerCodeTextBox
             // 
             this.SellerCodeTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -207,6 +235,9 @@ namespace Apteka
             this.SellerCodeTextBox.StateCommon.Content.Font = new System.Drawing.Font("Verdana", 15F, System.Drawing.FontStyle.Bold);
             this.SellerCodeTextBox.StateCommon.Content.Padding = new System.Windows.Forms.Padding(4, 7, -1, -1);
             this.SellerCodeTextBox.TabIndex = 15;
+            this.SellerCodeTextBox.Click += new System.EventHandler(this.SellerCodeTextBox_Click);
+            this.SellerCodeTextBox.Enter += new System.EventHandler(this.SellerCodeTextBox_Enter);
+            this.SellerCodeTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SellerCodeTextBox_MouseDown);
             // 
             // SellerLabel
             // 
@@ -219,28 +250,6 @@ namespace Apteka
             this.SellerLabel.TabIndex = 14;
             this.SellerLabel.Text = "Код продавця";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Verdana", 30F);
-            this.label2.Location = new System.Drawing.Point(68, 38);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(142, 48);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Сума:";
-            // 
-            // FullPriceLabel
-            // 
-            this.FullPriceLabel.AutoSize = true;
-            this.FullPriceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.FullPriceLabel.Font = new System.Drawing.Font("Verdana", 30F);
-            this.FullPriceLabel.Location = new System.Drawing.Point(404, 38);
-            this.FullPriceLabel.Name = "FullPriceLabel";
-            this.FullPriceLabel.Size = new System.Drawing.Size(142, 48);
-            this.FullPriceLabel.TabIndex = 17;
-            this.FullPriceLabel.Text = "Сума:";
-            // 
             // CreateReceipts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,7 +261,7 @@ namespace Apteka
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "CreateReceipts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CreateReceipts";
+            this.Text = "Обліку медикаментів аптеки";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.CreateReceipts_FormClosed);
             this.Load += new System.EventHandler(this.CreateReceipts_Load);
             this.TopBar.ResumeLayout(false);

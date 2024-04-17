@@ -209,5 +209,25 @@ namespace Apteka
                 Application.Exit();
             }
         }
+
+        private void SellerCodeTextBox_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void SellerCodeTextBox_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            // Assuming textBox1 is your Krypton TextBox control
+            SellerCodeTextBox.StateCommon.Border.Width = 2; // Set the border width to 2 pixels
+            SellerCodeTextBox.StateCommon.Border.Color1 = Color.LightBlue;
+            SellerCodeTextBox.StateCommon.Border.Color2 = Color.LightBlue;
+        }
+
+        private void SellerCodeTextBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,7 @@ namespace Apteka
         private Form1 _form1;
         private string Description;
         private DataLoader dataLoader;
+        Image defaultiamge = Image.FromFile(@"C:\Users\prooo\source\repos\Apteka\Apteka\Debug\ProductsImages\DefaultPicture.jpg");
 
         public Product(Products product, Form1 form1, DataLoader _dataLoader)
         {
@@ -25,6 +27,8 @@ namespace Apteka
             _form1 = form1;
             dataLoader = _dataLoader;
             InitializeComponent();
+            ProductPictureBox.Image = LoadImage(product.ProductID);
+
         }
 
         private void Product_Load(object sender, EventArgs e)
@@ -55,6 +59,19 @@ namespace Apteka
         {
             this.Hide();
             _form1.OpenAddProductPage();
+        }
+        public Image LoadImage(int id)
+        {
+            string imagePath = $@"C:\Users\prooo\source\repos\Apteka\Apteka\Debug\ProductsImages\{id}.png";
+            if (File.Exists(imagePath))
+            {
+                return Image.FromFile(imagePath);
+                //pictureBox.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                return defaultiamge;
+            }
         }
     }
 }

@@ -216,6 +216,7 @@ namespace Apteka
         }
         private void LoadSoartingComboBox()
         {
+            SortingComboBox.Items.Clear();
             SortingComboBox.Items.AddRange(new string[] { "за алфавітом", "за зростанням", "за спаданням" });
 
             // Set the default selection
@@ -509,7 +510,11 @@ namespace Apteka
         }
         public void OpenReceiptCreationPage()
         {
-            CreateReceipts receipt = new CreateReceipts(productQuantities, _sellers, this, _dataLoader);
+            // Assuming productQuantities is your original dictionary
+            Dictionary<Products, int> productQuantitiesCopy = new Dictionary<Products, int>(productQuantities);
+
+            CreateReceipts receipt = new CreateReceipts(productQuantitiesCopy, _sellers, this, _dataLoader);
+
             receipt.Show();
             this.Hide();
         }
@@ -608,7 +613,6 @@ namespace Apteka
             _dataLoader.UpdateBoughtProductsDatabase(receipt);
         }
         #endregion
-
     }
 
 }

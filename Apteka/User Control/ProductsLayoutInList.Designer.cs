@@ -57,7 +57,7 @@ namespace Apteka
             this.label4 = new System.Windows.Forms.Label();
             this.productCost = new System.Windows.Forms.Label();
             this.productCode = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ProductPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataHolder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataHolder.Panel)).BeginInit();
             this.ProductDataHolder.Panel.SuspendLayout();
@@ -66,7 +66,7 @@ namespace Apteka
             this.MinusPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PlusPanel)).BeginInit();
             this.PlusPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // ProductDataHolder
@@ -84,7 +84,8 @@ namespace Apteka
             this.ProductDataHolder.Panel.Controls.Add(this.PlusPanel);
             this.ProductDataHolder.Panel.Controls.Add(this.productCost);
             this.ProductDataHolder.Panel.Controls.Add(this.productCode);
-            this.ProductDataHolder.Panel.Controls.Add(this.pictureBox1);
+            this.ProductDataHolder.Panel.Controls.Add(this.ProductPictureBox);
+            this.ProductDataHolder.Panel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ProductDataHolder.Panel.Click += new System.EventHandler(this.ProductDataHolder_Click);
             this.ProductDataHolder.Size = new System.Drawing.Size(270, 330);
             this.ProductDataHolder.StateCommon.Border.DrawBorders = ((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders)((((ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Top | ComponentFactory.Krypton.Toolkit.PaletteDrawBorders.Bottom) 
@@ -127,6 +128,7 @@ namespace Apteka
             // 
             this.AddToRecieptButton.AutoSize = true;
             this.AddToRecieptButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(169)))), ((int)(((byte)(80)))));
+            this.AddToRecieptButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddToRecieptButton.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddToRecieptButton.ForeColor = System.Drawing.Color.White;
             this.AddToRecieptButton.Location = new System.Drawing.Point(91, 280);
@@ -153,6 +155,7 @@ namespace Apteka
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Verdana", 30F);
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(8, -2);
@@ -192,6 +195,7 @@ namespace Apteka
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Verdana", 30F);
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(7, -2);
@@ -229,14 +233,16 @@ namespace Apteka
             this.productCode.TabIndex = 2;
             this.productCode.Text = "Код товару 0123";
             // 
-            // pictureBox1
+            // ProductPictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(42, 30);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 188);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.ProductDataHolder_Click);
+            this.ProductPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ProductPictureBox.Location = new System.Drawing.Point(42, 30);
+            this.ProductPictureBox.Name = "ProductPictureBox";
+            this.ProductPictureBox.Size = new System.Drawing.Size(182, 188);
+            this.ProductPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductPictureBox.TabIndex = 0;
+            this.ProductPictureBox.TabStop = false;
+            this.ProductPictureBox.Click += new System.EventHandler(this.ProductDataHolder_Click);
             // 
             // ProductsLayoutInList
             // 
@@ -256,7 +262,7 @@ namespace Apteka
             ((System.ComponentModel.ISupportInitialize)(this.PlusPanel)).EndInit();
             this.PlusPanel.ResumeLayout(false);
             this.PlusPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductPictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -268,7 +274,7 @@ namespace Apteka
         private System.Windows.Forms.Label productCost;
         private System.Windows.Forms.Label AddToRecieptButton;
         private System.Windows.Forms.Label productCode;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox ProductPictureBox;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel MinusPanel;
         private System.Windows.Forms.Label label5;
         private ComponentFactory.Krypton.Toolkit.KryptonPanel PlusPanel;

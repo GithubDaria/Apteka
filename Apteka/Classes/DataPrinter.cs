@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -9,6 +12,7 @@ namespace Apteka
 {
     class DataPrinter
     {
+        Image defaultiamge = Image.FromFile(@"C:\Users\prooo\source\repos\Apteka\Apteka\Debug\ProductsImages\DefaultPicture.jpg");
         private int maxLoadedProductsCount;
         public int MaxLoadedProductsCount
         {
@@ -48,12 +52,13 @@ namespace Apteka
                     for (int i = startIndex; i <= endIndex; i++)
                     {
                         // Create custom control for each product and add it to the layout panel
-                        ProductsLayoutInList customControl = new ProductsLayoutInList
+                        ProductsLayoutInList customControl = new ProductsLayoutInList(LoadImage(products[i].ProductID))
                         {
                             // Populate labels in the custom control with product information
                             ProductCode = $"Код товару {products[i].ProductID}",
                             PRoductName = products[i].Name,
-                            ProductCost = products[i].Price.ToString() + "₴"
+                            ProductCost = products[i].Price.ToString() + "₴",
+                            
                         };
 
                         customControl.Tag = products[i];
@@ -80,11 +85,27 @@ namespace Apteka
                 Console.WriteLine("IsNull");
             }
         }
+        public Image LoadImage(int id)
+        {
+            string imagePath = $@"C:\Users\prooo\source\repos\Apteka\Apteka\Debug\ProductsImages\{id}.png";
+            if (File.Exists(imagePath))
+            {
+                return Image.FromFile(imagePath);
+                //pictureBox.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                return defaultiamge;
+            }
+        }
         public void ResetLoadedProductsCount()
         {
             productsLayout.Controls.Clear();
             loadedProductsCount = 0;
         }
-
+        public string RemoveDoubleSlashes(string path)
+        {
+            return Regex.Replace(path, @"[\\]+", @"\");
+        }
     }
 }
